@@ -48,7 +48,7 @@ export const Header = () => {
   );
 };
 
-Header.SearchBox = () => {
+const SearchBox = () => {
   const { open, setOpen } = useSearchContext();
   return (
     <div className="overflow-hidden">
@@ -89,6 +89,7 @@ Header.SearchBox = () => {
     </div>
   );
 };
+Header.SearchBox = SearchBox;
 
 const SearchContext = createContext<{
   open: boolean;

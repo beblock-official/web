@@ -40,10 +40,10 @@ const ProjectGroup = ({ title }: { title: string }) => {
     <div className="flex flex-col gap-lg w-full">
       <h2 className="text-xl font-bold">{title}</h2>
       <div className="flex flex-col gap-sm w-full">
-        <ProjectGroup.ProjectList />
-        <ProjectGroup.ProjectList />
-        <ProjectGroup.ProjectList />
-        <ProjectGroup.ProjectList />
+        <ProjectList />
+        <ProjectList />
+        <ProjectList />
+        <ProjectList />
       </div>
       <button className="bg-neutral-50 rounded-md p-2 font-bold border-neutral-300 border">
         전체보기
@@ -52,7 +52,7 @@ const ProjectGroup = ({ title }: { title: string }) => {
   );
 };
 
-ProjectGroup.ProjectList = () => {
+const ProjectList = () => {
   return (
     <div className="flex justify-between items-center w-full">
       <div className="flex gap-xl w-full">
@@ -165,3 +165,5 @@ ProjectGroup.ProjectList = () => {
     </div>
   );
 };
+
+ProjectGroup.ProjectList = ProjectList;
