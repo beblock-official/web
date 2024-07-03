@@ -36,20 +36,57 @@ input {
   all: unset;
 }
 
-.btn {
-  @apply py-2 px-4 rounded-3xl font-bold text-sm;
-  min-width: fit-content;
-  /* box-shadow: 0px 4px 13.5px 0px #4d248040; */
+.overflow-v-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-word;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
-.btn-primary {
-  @apply bg-primary text-white hover:bg-primary-001;
-}
+@layer components {
+  .btn {
+    @apply py-2 px-4 rounded-3xl font-bold text-sm;
+    min-width: fit-content;
+    /* box-shadow: 0px 4px 13.5px 0px #4d248040; */
+  }
 
-.btn-disabled {
-  @apply bg-text-004 text-white cursor-not-allowed;
-}
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-001;
+  }
 
+  .btn-disabled {
+    @apply bg-text-004 text-white cursor-not-allowed;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  h1,
+  h2 {
+    @apply font-bold;
+  }
+
+  h3,
+  h4 {
+    @apply font-semibold;
+  }
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${nunitoSans.className} flex w-screen h-screen`}>
-        <nav className="w-72 h-full bg-primary p-4 flex flex-col justify-between">
+        <nav className="w-72 min-w-72 h-full bg-primary p-4 flex flex-col justify-between">
           <div>
             <div className="text-white p-4 text-xl mb-11">LOGO</div>
             <ul className="font-bold flex flex-col gap-3">
@@ -40,9 +40,11 @@ export default function RootLayout({
             <li className="p-4 font-thin">Terms & Privacy</li>
           </ul>
         </nav>
-        <div className="w-full h-full overflow-visible flex flex-col">
+        <div className="h-full flex flex-col flex-1">
           <Header />
-          {children}
+          <main className="w-full h-full bg-white overflow-auto">
+            {children}
+          </main>
         </div>
       </body>
     </html>
