@@ -13,8 +13,8 @@ export default function Home() {
 
           <div className="bg-[#FFFFFF1F] rounded-xl p-10 text-white flex flex-col gap-lg items-center">
             <Image
-              width={32}
-              height={32}
+              width={200}
+              height={200}
               className="w-12 h-12 rounded-full"
               src="https://picsum.photos/200/200"
               alt="Rounded avatar"
@@ -60,8 +60,8 @@ const ProjectList = () => {
     <div className="flex justify-between items-center w-full">
       <div className="flex gap-xl w-full">
         <Image
-          width={32}
-          height={32}
+          width={200}
+          height={200}
           className="w-12 h-12 rounded-md"
           src="https://picsum.photos/200/200"
           alt=""

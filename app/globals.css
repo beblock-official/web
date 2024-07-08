@@ -65,9 +65,16 @@ svg {
     min-width: fit-content;
     /* box-shadow: 0px 4px 13.5px 0px #4d248040; */
   }
+  .btn-flex {
+    @apply flex items-center justify-center gap-2;
+  }
 
   .btn-primary {
     @apply bg-primary text-white hover:bg-primary-001;
+  }
+
+  .btn-white {
+    @apply bg-white hover:bg-neutral-50;
   }
 
   .btn-disabled {

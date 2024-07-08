@@ -11,8 +11,8 @@ export const Avatar = ({ className, ...props }: ComponentProps<"img">) => {
       src="https://picsum.photos/100/100"
       alt="Avatar Image"
       {...props}
-      width={32}
-      height={32}
+      width={100}
+      height={100}
     />
   );
 };

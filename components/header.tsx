@@ -1,6 +1,6 @@
 "use client";
-
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Transition } from "@headlessui/react";
 import {
   type SetStateAction,
@@ -11,8 +11,11 @@ import {
 } from "react";
 import { Chip } from "@/components/@common/chip";
 
+const except = ["/profile", "/news"];
 export const Header = () => {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  if (except.includes(pathname)) return null;
   return (
     <SearchContext.Provider value={{ open, setOpen }}>
       <header className="sticky top-0 z-20 bg-white px-12 py-4 w-full grid grid-cols-12">
@@ -106,6 +109,8 @@ const ProjectCard = () => {
     <div className="flex flex-col gap-md lg:col-span-2 col-span-1">
       <div className="rounded-lg h-[250px]">
         <Image
+          width={200}
+          height={300}
           className="w-full h-full object-fit"
           src="https://picsum.photos/200/300"
           alt="Card Post Image"
@@ -116,22 +121,22 @@ const ProjectCard = () => {
           <h5>title</h5>
           <div className="flex -space-x-4 rtl:space-x-reverse">
             <Image
-              width={32}
-              height={32}
+              width={100}
+              height={100}
               className="w-8 h-8 border-2 border-white rounded-full dark:border-gray-800"
               src="https://picsum.photos/100/100"
               alt=""
             />
             <Image
-              width={32}
-              height={32}
+              width={100}
+              height={100}
               className="w-8 h-8 border-2 border-white rounded-full dark:border-gray-800"
               src="https://picsum.photos/100/100"
               alt=""
             />
             <Image
-              width={32}
-              height={32}
+              width={100}
+              height={100}
               className="w-8 h-8 border-2 border-white rounded-full dark:border-gray-800"
               src="https://picsum.photos/100/100"
               alt=""

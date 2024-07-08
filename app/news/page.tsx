@@ -8,8 +8,8 @@ export default function News() {
       {/** search bar */}
       <div className="fixed left-[18rem] z-10 w-80 min-w-72 h-full bg-neutral-100 p-6 flex flex-col gap-8 lg:w-auto lg:h-[fit-content] ">
         <div className="flex justify-between">
-          <h3>Search</h3>
-          <button className="btn bg-white hover:bg-neutral-50 flex gap-sm !font-normal">
+          <h3 className="font-bold">Search</h3>
+          <button className="btn btn-white btn-flex !font-normal">
             <ShapeIcon />
             내가 저장한 뉴스
           </button>
