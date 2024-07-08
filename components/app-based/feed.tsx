@@ -7,6 +7,7 @@ import { HeartIcon } from "@/components/@icon/heart";
 import { RepostIcon } from "@/components/@icon/repost";
 import { ShareIcon } from "@/components/@icon/share";
 import classNames from "classnames";
+import Image from "next/image";
 import type { ReactNode } from "react";
 export const RightContentBox = ({
   title,
@@ -49,7 +50,9 @@ export const FeedProfile = ({
 export const FeedProject = () => {
   return (
     <div className="bg-white rounded-lg p-3 flex gap-2 items-center">
-      <img
+      <Image
+        width={80}
+        height={80}
         className="rounded-md w-10 h-10 flex-none"
         src="https://picsum.photos/80/80"
         alt="news card image"
@@ -65,7 +68,9 @@ export const FeedProject = () => {
 export const FeedNews = () => {
   return (
     <div>
-      <img
+      <Image
+        width={200}
+        height={200}
         className="rounded-xl w-full max-h-[156px]"
         src="https://picsum.photos/200/200"
         alt="news card image"
@@ -85,7 +90,9 @@ export const FeedPost = () => {
     <div className="overflow-hidden">
       <FeedProfile avatarSize="lg" />
       <Contents titleClasses="text-md font-bold mb-2" descClasses="mb-4" />
-      <img
+      <Image
+        width={400}
+        height={300}
         className="w-full min-h-72 max-h-72"
         src="https://picsum.photos/400/300"
         alt="news card image"

@@ -116,16 +116,22 @@ const ProjectCard = () => {
           <h5>title</h5>
           <div className="flex -space-x-4 rtl:space-x-reverse">
             <Image
+              width={32}
+              height={32}
               className="w-8 h-8 border-2 border-white rounded-full dark:border-gray-800"
               src="https://picsum.photos/100/100"
               alt=""
             />
             <Image
+              width={32}
+              height={32}
               className="w-8 h-8 border-2 border-white rounded-full dark:border-gray-800"
               src="https://picsum.photos/100/100"
               alt=""
             />
             <Image
+              width={32}
+              height={32}
               className="w-8 h-8 border-2 border-white rounded-full dark:border-gray-800"
               src="https://picsum.photos/100/100"
               alt=""

@@ -1,4 +1,5 @@
 import { PostStatistic } from "@/components/@common/post-statistic";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -11,7 +12,9 @@ export default function Home() {
           </div>
 
           <div className="bg-[#FFFFFF1F] rounded-xl p-10 text-white flex flex-col gap-lg items-center">
-            <img
+            <Image
+              width={32}
+              height={32}
               className="w-12 h-12 rounded-full"
               src="https://picsum.photos/200/200"
               alt="Rounded avatar"
@@ -56,9 +59,12 @@ const ProjectList = () => {
   return (
     <div className="flex justify-between items-center w-full">
       <div className="flex gap-xl w-full">
-        <img
+        <Image
+          width={32}
+          height={32}
           className="w-12 h-12 rounded-md"
           src="https://picsum.photos/200/200"
+          alt=""
         />
         <div className="flex flex-col justify-center">
           <p className="text-text-002">

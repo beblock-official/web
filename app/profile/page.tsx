@@ -1,3 +1,7 @@
 export default function Profile() {
-  return <main>Profile Page</main>;
+  return (
+    <div className="overflow-y-auto flex justify-end pl-[20rem] lg:pl-0">
+      Profile Page
+    </div>
+  );
 }

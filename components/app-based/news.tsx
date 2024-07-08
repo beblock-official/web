@@ -41,6 +41,8 @@ export const NewsCard = () => {
     <div className="flex-none flex w-full gap-lg max-h-[186px]">
       <div className="w-[186px] h-[186px] relative flex-none">
         <Image
+          width={186}
+          height={186}
           className="rounded-xl"
           src="https://picsum.photos/186/186"
           alt="news card image"
