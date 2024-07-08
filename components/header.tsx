@@ -15,7 +15,7 @@ export const Header = () => {
   const [open, setOpen] = useState(false);
   return (
     <SearchContext.Provider value={{ open, setOpen }}>
-      <header className="sticky top-0 z-10 bg-white px-12 py-4 w-full grid grid-cols-12">
+      <header className="sticky top-0 z-20 bg-white px-12 py-4 w-full grid grid-cols-12">
         <div
           onClick={() => {
             setOpen(!open);
@@ -53,12 +53,12 @@ const SearchBox = () => {
   return (
     <div className="overflow-hidden">
       <Transition show={open}>
-        <div className="bg-white px-12 py-4 fixed w-[-webkit-fill-available] h-full z-10">
+        <div className="bg-white px-12 py-4 fixed w-[-webkit-fill-available] h-full z-20">
           <div className="mb-8">
             <h3 className="text-3xl font-bold text-text-001 mb-6">
               최근 검색어
             </h3>
-            <div className="flex gap-sm font-thin">
+            <div className="flex flex-wrap gap-sm font-thin">
               {[
                 "BitCoin",
                 "Blockchain",
@@ -105,7 +105,7 @@ const ProjectCard = () => {
   return (
     <div className="flex flex-col gap-md lg:col-span-2 col-span-1">
       <div className="rounded-lg h-[250px]">
-        <img
+        <Image
           className="w-full h-full object-fit"
           src="https://picsum.photos/200/300"
           alt="Card Post Image"
@@ -115,17 +115,17 @@ const ProjectCard = () => {
         <div className="title text-2xl font-bold flex justify-between w-full">
           <h5>title</h5>
           <div className="flex -space-x-4 rtl:space-x-reverse">
-            <img
+            <Image
               className="w-8 h-8 border-2 border-white rounded-full dark:border-gray-800"
               src="https://picsum.photos/100/100"
               alt=""
             />
-            <img
+            <Image
               className="w-8 h-8 border-2 border-white rounded-full dark:border-gray-800"
               src="https://picsum.photos/100/100"
               alt=""
             />
-            <img
+            <Image
               className="w-8 h-8 border-2 border-white rounded-full dark:border-gray-800"
               src="https://picsum.photos/100/100"
               alt=""

@@ -4,8 +4,8 @@ export const ShapeIcon: IconComponent = ({
   ...props
 }) => {
   const colorClasses = {
-    default: "text-white",
-    "text-003": "text-text-003",
+    default: "text-text-003",
+    white: "text-white",
   };
 
   return (
